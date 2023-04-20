@@ -21,11 +21,11 @@ public class Impares {
     }
 
     public static void main(String[] args) {
-        /*
-         * System.out.println(gen_pares(47));
-         * System.out.println(gen_impares(47));
-         * System.out.println(gen_cuadrados(5));
-         */
+
+        System.out.println(gen_pares(47));
+        System.out.println(gen_impares(47));
+        System.out.println(gen_cuadrados(5));
+
         Function<Integer, List<Integer>> gen_pares2 = n -> IntStream.iterate(1, x -> x + 1).filter(x -> x % 2 == 0)
                 .limit(n).boxed().collect(Collectors.toList());
 
